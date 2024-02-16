@@ -18,6 +18,8 @@ services:
       POSTGRES_DB: chat
       POSTGRES_USER: app
       POSTGRES_PASSWORD: app
+    volumes:
+      - '.:/app:z'
     ports:
       - "5432:5432"
 

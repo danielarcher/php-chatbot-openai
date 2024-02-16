@@ -28,6 +28,12 @@ Use Docker to set up the environment. A Dockerfile and docker-compose.yml are pr
 ```bash
 docker-compose up -d
 ```
+### Before starting of the project, run the following commands
+```bash
+docker-compose exec db psql -U app -d chat -f /app/schema_pgvector.sql
+docker-compose exec web bash php /var/www/public/8.0.populate_postgres.php
+```
+
 ### Database Setup
 SQL schema files are provided to set up the necessary databases.
 
